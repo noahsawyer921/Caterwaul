@@ -1,0 +1,4 @@
+<turbo-frame id="rooms_box" class="rooms box">
+  <%= render "rooms/room_list", rooms: current_user.rooms, room_invitations: current_user.room_invitations %>
+  <%= render "rooms/form", room: Room.new %>
+</turbo-frame>

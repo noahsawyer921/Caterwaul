@@ -1,0 +1,9 @@
+<div class="friend_request_form">
+  Send Friend Request:
+  <%= form_with(url: "friendship_invitations/send_invitation", data: { controller: 'clear-form', action: "turbo:submit-end->clear-form#reset" }) do |form| %>
+    <div>
+      <%= form.text_field "friendship_invitation[email]", class: "friend_request_input form_input" %>
+      <%= form.submit "Send", class:"friend_request_send button" %>
+    </div>
+  <% end %>
+</div>

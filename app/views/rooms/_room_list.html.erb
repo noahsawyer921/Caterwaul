@@ -1,0 +1,12 @@
+<ol class="room_list">
+  <turbo-frame id="room_list" target="chat_room">
+    <%= render partial: "room_memberships/room_membership", collection: current_user.room_memberships.order(:room_id) %>
+  </turbo-frame>
+  <turbo-frame id="room_invite_list">
+    <strong>Pending:</strong>
+    <% room_invitations.each do |room_invitation| %>
+      <%= render "room_invitations/room_invitation", room_invitation: room_invitation %>
+    <% end %>
+  </turbo-frame>
+
+</ol>

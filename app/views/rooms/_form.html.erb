@@ -1,0 +1,21 @@
+<div class="room_form">
+  Create Room:
+  <%= form_with(model: room, data: { controller: 'clear-form', action: "turbo:submit-end->clear-form#reset" }) do |form| %>
+    <% if room.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+        <ul>
+          <% room.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.text_field :name, class: "room_input form_input"%>
+      <%= form.submit "Create", class: "button room_create" %>
+    </div>
+  <% end %>
+</div>

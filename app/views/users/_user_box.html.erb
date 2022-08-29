@@ -1,0 +1,4 @@
+<div id="users" class="users box">
+  <%= render partial: "users/user_list", locals: {users: User.all} %>
+  <%= render partial: "friendship_invitations/form" %>
+</div>

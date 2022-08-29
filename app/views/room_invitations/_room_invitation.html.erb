@@ -1,0 +1,7 @@
+<li>
+  <turbo-frame id="<%= dom_id room_invitation %>">
+    <%= render partial: "rooms/room", locals:{room: room_invitation.invited_room} %>
+    <%= button_to "Accept", room_invitation_accept_url(room_invitation), class:"button"%>
+    <%= button_to "Decline", room_invitation_decline_url(room_invitation), class:"button" %>
+  </turbo-frame>
+</li>

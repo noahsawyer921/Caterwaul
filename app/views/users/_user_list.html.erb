@@ -1,0 +1,11 @@
+<ol class="friend_list">
+  <turbo-frame id="friend_list">
+    <%= render partial: "friendships/friendship", collection: current_user.friendships %>
+  </turbo-frame>
+  <turbo-frame id="friend_invite_list">
+    <%= render partial: "friendship_invitations/friendship_invitation", collection: current_user.friendship_invitations %>
+    <% current_user.sent_friendship_invitations.each do |sent_friendship_invitation| %>
+      <%= render partial: "friendship_invitations/friendship_invitation_sender", locals:{friendship_invitation: sent_friendship_invitation} %>
+    <% end %>
+  </turbo-frame>
+</ol>

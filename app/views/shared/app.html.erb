@@ -1,0 +1,19 @@
+<head>
+  <%= turbo_stream_from "app_#{current_user.id}" %>
+</head>
+
+<div class="left_column">
+  <%= render "rooms/room_box" %>
+  <%= render "users/user_box" %>
+</div>
+
+
+
+<div class="right_column box">
+  <% if current_room %>
+    <%= render partial: "shared/chat_room", locals: {room: current_room} %>
+  <% else %>
+    <%= render partial: "shared/empty_chat" %>
+  <% end %>
+</div>
+

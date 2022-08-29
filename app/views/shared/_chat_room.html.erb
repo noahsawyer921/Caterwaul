@@ -1,0 +1,12 @@
+<turbo-frame id="chat_room">
+  <header>
+    <h1><%= room.name %></h1>
+    <%= button_to "Leave Room", room_leave_path(room), method: :delete, class: "button" %>
+    <%= link_to "Exit App View", root_url, data: {turbo: false}%>
+  </header>
+  <%= render partial: "room_invitations/form", locals: {room_invitation: RoomInvitation.new, room: room} %>
+  <%= render partial: "messages/message_list", locals: {room: room} %>
+  <div class="message_form">
+    <%= render partial: "messages/form", locals: {message: Message.new, room_id: room.id} %>
+  </div>
+</turbo-frame>

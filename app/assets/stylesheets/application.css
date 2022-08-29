@@ -1,0 +1,186 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ * Pallete
+ * https://coolors.co/2c423f-3c4f50-4c5b61-829191-949b96-c5c5c5-cacaca
+ */
+
+body {
+  background: #2C423F;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin:  0;
+}
+li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.button,
+.actions input,
+a,
+.form_input,
+.user {
+  text-decoration: none;
+  box-sizing: border-box;
+  display: inline;
+  border: solid #2c423f;
+  border-width: 1px;
+  background-color: #3C4F50;
+  color: #C5C5C5;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.button_to {
+  display: inline;
+}
+
+.left_column {
+  position: fixed;
+  float: left;
+  width: 25%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+.box {
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #CACACA;
+  background: #4C5B61;
+  border-color: #949B96;
+  border-style: solid;
+  border-radius: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.users{
+  height: 50%;
+  width: 100%;
+  top: 50%;
+
+}
+.rooms{
+  
+  height: 50%;
+  width: 100%;
+ 
+}
+.room_list{
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.right_column {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+}
+
+.room_form{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.message{
+  padding: 5px;
+  padding-top: 1px;
+  border-radius: 5px;
+}
+.message:hover{
+  background-color: #2c423f;
+
+}
+
+.message_list{
+  height: calc(100% - 160px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.message_form{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.message_input{
+  width: calc(100% - 100px);
+  float: left;
+}
+.message_send{
+  width: 50px;
+  float: right;
+  margin-right: 25px;
+  max-width: 25%;
+}
+.room_input{
+  min-width: 100px;
+  width: calc(100% - 120px);
+  float: left;
+}
+.room_create{
+  width: 60px;
+  margin-left: 25px;
+}
+.home_box {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+}
+.friend_list{
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.friend_request_form{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.friend_request_input{
+  min-width: 100px;
+  width: calc(100% - 120px);
+  float: left;
+}
+.friend_request_send{
+  width: 60px;
+  margin-left: 25px;
+}
+.timestamp{
+  font-size: 8px;
+  color: #949b96;
+}
+.message_body {
+  margin: 5px;
+  margin-bottom: 0px;
+}

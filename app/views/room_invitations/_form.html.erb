@@ -1,0 +1,10 @@
+<div>
+  Invite User to Room:
+  <%= form_with(url: "room_invitations/send_invitation", data: { controller: 'clear-form', action: "turbo:submit-end->clear-form#reset" }) do |form| %>
+    <div>
+      <%= form.text_field "room_invitation[email]", class: "form_input" %>
+      <%= form.hidden_field "room_invitation[invited_room_id]", value: room.id %>
+      <%= form.submit "Send Invite", class: "button"%>
+    </div>
+  <% end %>
+</div>

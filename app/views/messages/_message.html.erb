@@ -1,0 +1,6 @@
+<li class="message">
+  <span id="<%= dom_id message %>">
+    <p class="message_header"><span class="user"><%= message.user.email %></span> <span class="timestamp"><%= time_ago_in_words message.created_at %> ago </span></p>
+    <p class="message_body"><%= message.body %></p>
+  </span>
+</li>

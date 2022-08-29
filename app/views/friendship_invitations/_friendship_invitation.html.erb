@@ -1,0 +1,7 @@
+<turbo-frame id="<%= dom_id friendship_invitation %>">
+  <li>
+    <span class="user"><%= friendship_invitation.sender.email %></span>
+    <%= button_to "Accept", friendship_invitation_accept_url(friendship_invitation), class: "button" %>
+    <%= button_to "Decline", friendship_invitation_decline_url(friendship_invitation), class: "button" %>
+  </li>
+</turbo-frame>
